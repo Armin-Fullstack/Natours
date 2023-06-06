@@ -30,4 +30,39 @@ body {
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh , 0 100%);
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 4rem 4rem;
+
+}
+.logo {
+  height: 3.5rem;
+}
+.header-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+}
+.primary-heading {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+.primary-heading-main {
+  text-transform: uppercase;
+  letter-spacing: 3.5rem;
+  font-size: 6rem;
+  font-weight: 700;
+}
+.primary-heading-sub {
+font-size: 2rem;
+letter-spacing: 1.95rem;
 }
