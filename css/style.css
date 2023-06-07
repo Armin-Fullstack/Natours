@@ -22,7 +22,7 @@ body {
   font-weight: 400;
   line-height: 1.7;
   color: #777;
-  padding: 3rem
+  padding: 3rem;
 }
 .header {
   height: 95vh;
@@ -50,19 +50,114 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50% , -50%);
+  color: #fff;
+  text-align: center;
 }
 .primary-heading {
   display: flex;
   flex-direction: column;
-  color: #fff;
+  backface-visibility: hidden;
+  margin-bottom: 9.2rem;
 }
 .primary-heading-main {
   text-transform: uppercase;
   letter-spacing: 3.5rem;
   font-size: 6rem;
-  font-weight: 700;
+  font-weight: 400;
+  animation: moveInLeft 1s ease-out;
 }
 .primary-heading-sub {
 font-size: 2rem;
 letter-spacing: 1.95rem;
+font-weight: 700;
+animation: moveInRight 1s ease-out;
+}
+
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+.btn:link , .btn:visited{
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  color: #777;
+  display: inline-block;
+  padding: 1.5rem 4rem;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-size: 1.6rem;
+  position: relative;
+}
+.btn::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 30px;
+  transition: all 0.4s;
+}
+
+.btn:hover{
+  transform: translateY(-0.3rem);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.btn:active{
+  transform: translateY(-0.1rem);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+
+}
+.btn-white {
+  background-color: #fff;
+}
+.btn-white::after {
+  background-color: #fff;
+}
+.btn:hover::after {
+  transform: scale(1.4 , 1.6);
+  opacity: 0;
+}
+.btn-animated {
+  animation: moveInBottom 1s ease-out 0.75s;
+  animation-fill-mode: backwards;
 }
