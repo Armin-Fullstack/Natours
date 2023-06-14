@@ -5,6 +5,7 @@
   padding: 0;
   list-style-type: none;
   box-sizing: inherit;
+  text-decoration: none;
 }
 
 html {
@@ -14,4 +15,10 @@ html {
 body {
   padding: 3rem;
   box-sizing: border-box;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 4rem 4rem;
 }

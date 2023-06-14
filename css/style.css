@@ -4,7 +4,8 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+  text-decoration: none; }
 
 html {
   font-size: 62.5%; }
@@ -12,6 +13,11 @@ html {
 body {
   padding: 3rem;
   box-sizing: border-box; }
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 4rem 4rem; }
 
 @keyframes moveInLeft {
   0% {
@@ -79,6 +85,25 @@ body {
     transform: skew(15deg, 2deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(40, 180, 133, 0.2); }
 
+.tertiary-heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.about-content-paragraph {
+  font-size: 1.6rem; }
+  .about-content-paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   border: none;
@@ -125,6 +150,25 @@ body {
   animation: moveInBottom 1s ease-out 0.75s;
   animation-fill-mode: backwards; }
 
+.btn-text:link, .btn-text:visited {
+  display: inline-block;
+  color: #55c57a;
+  border-bottom: 0.1rem solid #55c57a;
+  padding: .3rem;
+  font-size: 1.6rem;
+  transition: all .2s; }
+
+.btn-text:hover {
+  background-color: #55c57a;
+  color: #fff;
+  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.15);
+  border: none;
+  transform: translateY(-0.2rem); }
+
+.btn-text:active {
+  transform: translate(0);
+  box-shadow: 0 0.5rem 0.1rem rgba(0, 0, 0, 0.15); }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
@@ -135,10 +179,7 @@ body {
   .header__nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    max-width: 120rem;
-    margin: 0 auto;
-    padding: 4rem 4rem; }
+    justify-content: space-between; }
   .header__logo {
     height: 3.5rem; }
   .header-content {
@@ -148,6 +189,11 @@ body {
     transform: translate(-50%, -50%);
     color: #fff;
     text-align: center; }
+
+.about-content-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 6rem; }
 
 .about-section {
   background-color: #f7f7f7;
