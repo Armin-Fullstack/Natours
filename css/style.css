@@ -64,6 +64,21 @@ body {
     font-weight: 700;
     animation: moveInRight 1s ease-out; }
 
+.secondry-heading {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 0.3s;
+  letter-spacing: .2rem; }
+  .secondry-heading:hover {
+    transform: skew(15deg, 2deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(40, 180, 133, 0.2); }
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   border: none;
@@ -133,3 +148,8 @@ body {
     transform: translate(-50%, -50%);
     color: #fff;
     text-align: center; }
+
+.about-section {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20vh; }

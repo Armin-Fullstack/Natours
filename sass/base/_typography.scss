@@ -24,4 +24,20 @@ body {
     animation: moveInRight 1s ease-out;
   }
 }
+.secondry-heading {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  background-image: linear-gradient(to right, $primary-color-light, $primary-color-dark);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 0.3s;
+  letter-spacing: .2rem;
+  &:hover {
+    transform: skew(15deg , 2deg) scale(1.1);
+    text-shadow: .5rem 1rem 2rem rgba($primary-color-dark, .2);
+  }
+}
 
