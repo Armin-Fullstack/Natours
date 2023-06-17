@@ -1,4 +1,6 @@
 .features-container {
-  display: flex;
-  gap: 6rem;
+  @include flexContainer
+}
+.cards-container {
+  @include flexContainer
 }

@@ -3,7 +3,7 @@
   &__item {
     position: absolute;
     width: 55%;
-    box-shadow: 0 1.5rem 4rem rgba($black-color, 0.4);
+    box-shadow: $box-shadow-small;
     border-radius: 0.2rem;
     transition: all 0.3s;
     outline-offset: 2rem;
