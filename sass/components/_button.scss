@@ -5,7 +5,6 @@
     text-transform: uppercase;
     border: none;
     outline: none;
-    color: $dark-gray-color;
     display: inline-block;
     padding: 1.5rem 4rem;
     border-radius: 3rem;
@@ -42,8 +41,16 @@
   }
   &--white {
     background-color: $white-color;
+    color: $dark-gray-color;
     &::after {
       background-color: $white-color;
+    }
+  }
+  &--green {
+    background-color: $primary-color;
+    color: $white-color;
+    &::after {
+      background-color: $primary-color;
     }
   }
   &--animated {
