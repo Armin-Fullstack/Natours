@@ -381,7 +381,7 @@ body {
 
 .story {
   width: 75%;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.6);
   margin: 0 auto 8rem auto;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
   border-radius: 0.3rem;
@@ -428,6 +428,21 @@ body {
 .story:hover .story__img {
   transform: translateX(-4rem) scale(1);
   filter: blur(0.3rem) brightness(80%);
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.15;
+}
+.bg-video__content {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .header {
@@ -497,7 +512,7 @@ body {
 
 .story-section {
   padding: 15rem 0;
-  background-color: #f7f7f7;
+  position: relative;
 }
 
 /*# sourceMappingURL=style.css.map */
