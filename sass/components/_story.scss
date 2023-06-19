@@ -1,7 +1,7 @@
 .story {
   width: 75%;
   background-color: $white-color;
-  margin: 0 auto;
+  margin: 0 auto 8rem auto;
   box-shadow: 0 3rem 6rem rgba($black-color, 0.1);
   border-radius: 0.3rem;
   padding: 6rem;
@@ -17,14 +17,34 @@
     clip-path:  circle(50% at 50% 50%);
     float: left;
     transform: translateX(-3rem) skewX(12deg);
+    position: relative;
   }
   &__img {
     height: 100%;
+    transform: translateX(-4rem) scale(1.4);
+    transition: all 0.5s;
   }
   &__caption {
-
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , 20%);
+    color: $white-color;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
   }
   &__text {
     transform: skewX(12deg);
+  }
+  &:hover &__caption{
+    opacity: 1;
+    transform: translate(-50% , -50%);
+  }
+  &:hover &__img {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(0.3rem) brightness(80%);
   }
 }
