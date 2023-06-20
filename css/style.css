@@ -117,30 +117,30 @@ body {
 }
 
 .u-margin-bottom-small {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem !important;
 }
 
 .u-margin-bottom-medium {
-  margin-bottom: 4rem;
+  margin-bottom: 4rem !important;
 }
 
 .u-margin-bottom-big {
-  margin-bottom: 8rem;
+  margin-bottom: 8rem !important;
 }
 
 .u-margin-bottom-huge {
-  margin-bottom: 10rem;
+  margin-bottom: 10rem !important;
 }
 
 .u-center-text {
-  text-align: center;
+  text-align: center !important;
 }
 
 .u-left-text {
-  text-align: left;
+  text-align: left !important;
 }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   border: none;
   outline: none;
@@ -173,7 +173,7 @@ body {
   transform: scale(1.4, 1.6);
   opacity: 0;
 }
-.btn:active {
+.btn:active, .btn:focus {
   transform: translateY(-0.1rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
@@ -462,6 +462,7 @@ body {
   display: block;
   width: 90%;
   color: inherit;
+  transition: all 0.5s;
 }
 .form__input:focus {
   outline: none;
@@ -485,6 +486,46 @@ body {
 .form__input:placeholder-shown + .form__label {
   opacity: 0;
   transform: translateY(-4rem);
+}
+.form__radio-group {
+  display: inline-block;
+  width: 49%;
+}
+.form__radio-label {
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding-left: 4.5rem;
+  position: relative;
+}
+.form__radio-button {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 0.5rem solid #55c57a;
+  position: absolute;
+  left: 0;
+  top: -0.4rem;
+}
+.form__radio-button::after {
+  content: "";
+  display: inline-block;
+  width: 1.3rem;
+  height: 1.3rem;
+  background-color: #55c57a;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.2s;
+}
+.form__radio-input {
+  display: none;
+}
+.form__radio-input:checked + .form__radio-label .form__radio-button::after {
+  opacity: 1;
 }
 
 .header {
@@ -571,7 +612,6 @@ body {
 }
 .book__form {
   width: 50%;
-  background-color: bisque;
   padding: 6rem;
 }
 
