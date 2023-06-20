@@ -1,0 +1,40 @@
+.form {
+  &__group:not(:last-child){
+    margin-bottom: 2rem;
+  }
+  &__input {
+    font-size: 1.5rem;
+    padding: 1.5rem 2rem;
+    border: none;
+    font-family: inherit; // forced to get the font family
+    background-color: rgba($white-color, 0.5);
+    border-bottom: 0.3rem solid transparent; // the element jumped
+    display: block;
+    width: 90%;
+    color: inherit;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba($black-color, .1);
+      border-bottom: 0.3rem solid $primary-color;
+      &:invalid{
+        border-bottom: 0.3rem solid $secondry-color-dark;
+      }
+    }
+    &::-webkit-input-placeholder {
+      color: $dark-gray-color-2;
+    }
+  }
+  &__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: .7rem;
+    display: inline-block;
+    transition: all 0.5s;
+  }
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    transform: translateY(-4rem);
+  }
+}
