@@ -569,6 +569,19 @@ body {
   gap: 6rem;
 }
 
+.footer {
+  background-color: #333;
+  padding: 10rem 0;
+  font-size: 1.4rem;
+}
+.footer__logo-box {
+  text-align: center;
+  margin-bottom: 8rem;
+}
+.footer__logo {
+  height: 15rem;
+}
+
 .about-section {
   background-color: #f7f7f7;
   padding: 25rem 0;
