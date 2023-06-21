@@ -2,3 +2,8 @@
   display: flex;
   gap: 6rem;
 }
+@mixin gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 6rem;
+}

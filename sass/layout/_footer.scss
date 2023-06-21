@@ -7,6 +7,33 @@
     margin-bottom: 8rem;
   }
   &__logo {
-    height: 15rem;
+    width: 15rem;
+    height: auto;
+  }
+
+  &__nav {
+    border-top: 0.1rem solid $dark-gray-color;
+    padding-top: 2rem;
+    display: inline-block;
+  }
+  &__list {
+    display: flex;
+    gap: 1.5rem;
+  }
+  &__link {
+    &:link,
+    &:visited {
+      color: $gray-color-1;
+      background-color: $dark-gray-color-3;
+      text-transform: uppercase;
+      transition: all 0.3s;
+      display: inline-block;
+    }
+    &:hover,
+    &:active {
+      color: $primary-color;
+      box-shadow: 0 1rem 2rem rgba($black-color, 0.4);
+      transform: rotate(5deg) scale(1.3);
+    }
   }
 }
