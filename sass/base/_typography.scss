@@ -16,12 +16,23 @@ body {
     font-size: 6rem;
     font-weight: 400;
     animation: moveInLeft 1s ease-out;
+    @include respond(tab-port) {
+      font-size: 5rem;
+      letter-spacing: 2rem;
+    }
+    @include respond(phone) {
+      font-size: 4rem;
+      letter-spacing: 1rem;
+    }
   }
   &--sub {
     font-size: 2rem;
     letter-spacing: 1.95rem;
     font-weight: 700;
     animation: moveInRight 1s ease-out;
+    @include respond(tab-port) {
+      letter-spacing: 0.5rem;
+    }
   }
 }
 .secondry-heading {
@@ -35,6 +46,12 @@ body {
   color: transparent;
   transition: all 0.3s;
   letter-spacing: .2rem;
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
   &:hover {
     transform: skew(15deg , 2deg) scale(1.1);
     text-shadow: .5rem 1rem 2rem rgba($primary-color-dark, .2);
