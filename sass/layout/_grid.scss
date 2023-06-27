@@ -1,6 +1,17 @@
 .about-content-container {
   @include gridContainer
 }
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 4rem;
+  @include respond(tab-port) {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 4rem;
+  }
+}
+
 .footer__container {
   @include gridContainer;
   @include respond(tab-port) {

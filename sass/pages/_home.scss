@@ -27,6 +27,15 @@
   margin-top: -20vh;
 }
 
+.tours-container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 4rem 4rem;
+  @include respond(tab-port) {
+    max-width: 50rem;
+  }
+}
+
 .story-section {
   padding: 15rem 0;
   position: relative;
