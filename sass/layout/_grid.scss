@@ -1,5 +1,11 @@
 .about-content-container {
-  @include gridContainer
+  @include gridContainer;
+  @include respond(tab-port) {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 4rem;
+  }
+
 }
 .cards-container {
   display: grid;
@@ -11,6 +17,15 @@
     row-gap: 4rem;
   }
 }
+.about-container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 4rem 4rem;
+  @include respond(tab-port) {
+  max-width: 90rem;
+  }
+}
+
 
 .footer__container {
   @include gridContainer;
