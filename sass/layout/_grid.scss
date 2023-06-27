@@ -2,5 +2,12 @@
   @include gridContainer
 }
 .footer__container {
-  @include gridContainer
+  @include gridContainer;
+  @include respond(tab-port) {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 4rem;
+    justify-items: center;
+    
+  }
 }

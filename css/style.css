@@ -691,6 +691,14 @@ body {
   grid-template-columns: 1fr 1fr;
   column-gap: 6rem;
 }
+@media (max-width: 56.25em) {
+  .footer__container {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 4rem;
+    justify-items: center;
+  }
+}
 
 .features-container {
   display: flex;
@@ -740,8 +748,13 @@ body {
 .footer__copyright .copyright {
   padding-top: 2rem;
   border-top: 0.1rem solid #777;
-  width: 80%;
+  max-width: 80%;
   margin-left: auto;
+}
+@media (max-width: 56.25em) {
+  .footer__copyright .copyright {
+    margin: 0 auto;
+  }
 }
 
 .navigation__checkbox {
