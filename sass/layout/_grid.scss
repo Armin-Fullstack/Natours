@@ -5,11 +5,10 @@
     column-gap: 0;
     row-gap: 4rem;
   }
-
 }
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr 1fr;
   column-gap: 4rem;
   @include respond(tab-port) {
     grid-template-columns: 1fr;
@@ -26,7 +25,24 @@
   }
 }
 
-
+.features-container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 4rem 4rem;
+  @include respond(tab-port) {
+  max-width: 50rem;
+  }
+}
+.features-boxes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 4rem;
+  @include respond(tab-port) {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 4rem;
+  }
+}
 .footer__container {
   @include gridContainer;
   @include respond(tab-port) {
