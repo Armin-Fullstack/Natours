@@ -112,4 +112,38 @@
   font-weight: 100;
   margin-bottom: 8rem;
 }
+
+  // Media Query
+ @include respond(tab-port) {
+  background-color: $white-color;
+  box-shadow: $box-shadow-small;
+  border-radius: 0.3rem;
+  &__side {
+    height: auto;
+    box-shadow: none;
+    &--back {
+      position: relative;
+      transform: rotateY(0);
+      height: auto;
+      padding: 7rem 4rem 4rem 4rem;
+      -webkit-clip-path: polygon(0 15% , 100% 0 , 0 100%, 0 100%);
+      clip-path: polygon(0 15% , 100% 0 , 100% 100%, 0 100%);
+    }
+  }
+  &:hover &__side--front {
+    transform: rotateY(0);
+  }
+  &__details {
+    padding: 1rem 3rem;
+  }
+  &__price--only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+&__price--value {
+  font-size: 4rem;
+  font-weight: 100;
+  margin-bottom: 3rem;
+}
+ }
 }

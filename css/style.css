@@ -479,6 +479,40 @@ body {
   font-weight: 100;
   margin-bottom: 8rem;
 }
+@media (max-width: 56.25em) {
+  .card {
+    background-color: #fff;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 0.3rem;
+  }
+  .card__side {
+    height: auto;
+    box-shadow: none;
+  }
+  .card__side--back {
+    position: relative;
+    transform: rotateY(0);
+    height: auto;
+    padding: 7rem 4rem 4rem 4rem;
+    -webkit-clip-path: polygon(0 15%, 100% 0, 0 100%, 0 100%);
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+  }
+  .card:hover .card__side--front {
+    transform: rotateY(0);
+  }
+  .card__details {
+    padding: 1rem 3rem;
+  }
+  .card__price--only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+  .card__price--value {
+    font-size: 4rem;
+    font-weight: 100;
+    margin-bottom: 3rem;
+  }
+}
 
 .story {
   width: 75%;
