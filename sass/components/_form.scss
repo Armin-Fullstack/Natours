@@ -13,6 +13,9 @@
     width: 90%;
     color: inherit;
     transition: all 0.5s;
+    @include respond(phone) {
+      width: 100%;
+    }
     &:focus {
       outline: none;
       box-shadow: 0 1rem 2rem rgba($black-color, .1);
@@ -40,6 +43,10 @@
   &__radio-group {
     display: inline-block;
     width: 49%;
+    @include respond(phone) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
   }
   &__radio-label {
     font-size: $default-font-size;

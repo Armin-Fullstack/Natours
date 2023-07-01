@@ -63,12 +63,25 @@
 
 .book {
   background-image: linear-gradient(105deg, rgba($white-color, 0.9) 0% , rgba($white-color, 0.9) 50%, transparent 50%) ,url(../../img/nat-10.jpg);
-  background-size: cover;
-  height: 50rem;
+  background-size: 100%;
   border-radius: 0.3rem;
   box-shadow: 0 1.5rem 4rem rgba($black-color, 0.2);
+  @include respond(tab-land) {
+    background-image: linear-gradient(105deg, rgba($white-color, 0.9) 0% , rgba($white-color, 0.9) 65%, transparent 65%) ,url(../../img/nat-10.jpg);
+    background-size: cover;
+  }
+  @include respond(tab-port) {
+    background-image: linear-gradient(105deg, rgba($white-color, 0.9) 0% , rgba($white-color, 0.9) 100%) ,url(../../img/nat-10.jpg);
+    background-size: cover;
+  }
   &__form {
     width: 50%;
     padding: 6rem;
+    @include respond(tab-land) {
+      width: 65%;
+    }
+    @include respond(tab-port) {
+      width: 100%;
+    }
   }
 }
