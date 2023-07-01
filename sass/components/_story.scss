@@ -8,6 +8,19 @@
   padding-left: 9rem;
   font-size: $default-font-size;
   transform: skewX(-12deg);
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+  @include respond(phone) {
+    transform: skewX(0);
+  }
+  &-container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 4rem 4rem;
+  }
   &__shape {
     width: 15rem;
     height: 15rem;
@@ -18,11 +31,29 @@
     float: left;
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
+
+    @include respond(phone) {
+      width: 17rem;
+      height: 17rem;
+      float: none;
+      transform: translateX(0) skewX(0);
+      -webkit-shape-outside: circle(0% at 0% 0%);
+      shape-outside: circle(0% at 0% 0%);
+      -webkit-clip-path: none;
+      clip-path:  none;
+      text-align: center;
+      margin: 0 auto 2rem auto ;
+      border-radius: 50%;
+      overflow: hidden;
+    }
   }
   &__img {
     height: 100%;
     transform: translateX(-4rem) scale(1.4);
     transition: all 0.5s;
+    @include respond(phone) {
+     object-fit: cover;
+    }
   }
   &__caption {
     position: absolute;
@@ -38,6 +69,9 @@
   }
   &__text {
     transform: skewX(12deg);
+    @include respond(phone) {
+      transform: skewX(0);
+    }
   }
   &:hover &__caption{
     opacity: 1;
@@ -46,5 +80,9 @@
   &:hover &__img {
     transform: translateX(-4rem) scale(1);
     filter: blur(0.3rem) brightness(80%);
+    // @include respond(phone) {
+    //   transform: translateX(0) scale(1);
+    //   filter: none
+    // }
   }
 }
